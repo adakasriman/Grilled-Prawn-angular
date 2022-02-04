@@ -7,20 +7,17 @@
                     Filter recipes by
                 </h5>
                 <div>
-                    <button class='OC-btn' onClick={dropdownHandular}></button>
+                    <button class='OC-btn' onClick={dropdownHandular}><i class="fas fa-plus"></i></button>
                 </div>
             </div>
             <div class='form-selectAndSearch'>
                 <div class='sort-iems'>
                     <label for="sort">Sort by</label>
                     <select class='form-select' id="sort" name='sort'>   
-                        <!-- {
-                            data.map((item, index) => {
-                                return (
-                                    <option value={index}>{item.item}</option>
-                                )
-                            })
-                        } -->
+                        <option class="option" value="NewestFirst"> NewestFirst</option>
+                        <option class="option" value=""> Content Name </option>
+                        <option class="option" value=""> Content Name </option>
+                        <option class="option" value=""> Content Name </option>
                     </select>
                 </div>
                 <div class='search-recipes'>
