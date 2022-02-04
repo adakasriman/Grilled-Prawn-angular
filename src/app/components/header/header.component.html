@@ -1,0 +1,20 @@
+<header>
+    <div class='header'>
+        <div class='logoAndTitle'>
+            <div class='logo'><i class="fas fa-hamburger"></i></div>
+            <div class='title'>The Grilled Prawn</div>
+        </div>
+        <nav>
+            <ul>
+                <li>RECIPES</li>
+                <li>DRINKS</li>
+                <li>ECORATIONS</li>
+                <li>ABOUT THE GRILLED PRAWN</li>
+                <li><i class="fas fa-shopping-cart"></i></li>
+            </ul>
+            <div class="count" *ngIf="cartCount">
+                {{cartCount}}
+            </div>
+        </nav>
+    </div>
+</header>

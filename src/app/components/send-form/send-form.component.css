@@ -1,0 +1,91 @@
+
+.sendForm {
+    background: #ea474c;
+    width: 100%;
+    padding: 40px 0 20px 0;
+    margin-top: 20px;
+  }
+  
+  .sendForm .form {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .sendForm .form h1 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .sendForm .form p {
+    width: 400px;
+    color: #fff;
+  }
+  
+  .sendForm .form .sendingData-types {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .sendForm .form .sendingData-types .userData  {
+    display: flex;
+    /* align-items: center; */
+    gap: 3%;
+    padding: 20px 0;
+  }
+  
+  .sendForm .form .sendingData-types button {
+    margin-right: 80px;
+  }
+  
+  .sendForm .form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sendForm .form label {
+    color: #fff;
+  }
+  
+  .sendForm .form input {
+    padding: 15px 110px 15px 20px;
+    border-radius: 4px;
+    margin: 5px 0;
+    border: none;
+  }
+  
+  .sendForm .form .sendingData-types .button {
+    padding: 5px 20px;
+    position: relative;
+    top: 10px;
+    background: #ea474c;
+    border: none;
+    color: #fff;
+  }
+  
+  .sendForm .form .sendingData-types .button i {
+    margin-right: 20px;
+  }
+  
+  .sendForm .form .add-friend {
+    margin-top: 25px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background: #ea474c;
+    border-radius: 4px;
+  }
+  
+  .sendForm .form .send-btn {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sendForm .form .send-btn button {
+    padding: 10px 30px;
+  }
+  
+  .sendForm .form .send-btn button i{
+    position: relative;
+    top: 3.5px;
+  }
+  

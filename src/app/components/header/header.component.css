@@ -1,0 +1,47 @@
+header {
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+  position: fixed;
+}
+
+.header {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.header .logoAndTitle {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header .logoAndTitle .logo {
+  font-size: 40px;
+}
+
+.header .logoAndTitle .title {
+  font-size: 20px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.count {
+  position: absolute;
+  top: 5px;
+  right: 90px;
+  font-size: 25px;
+}

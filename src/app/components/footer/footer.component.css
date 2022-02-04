@@ -1,0 +1,41 @@
+footer {
+    width: 90%;
+    margin: 50px auto 10px auto;
+  }
+  
+  footer .about-grilled {
+    display: flex;
+    justify-content: space-between;
+    gap: 7%;
+  }
+  
+  .about-grilled .grilled-details {
+    width: 90%;
+    display: flex;
+    gap: 1%;
+  }
+  
+  .about-grilled .grilled-details div {
+    width: 25%;
+  }
+  
+  .about-grilled .grilled-info {
+    width: 30%;
+  }
+  
+  .about-grilled h4 {
+    margin-bottom: 20px;
+  }
+  
+  h4 + p {
+    margin-bottom: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: red;
+  }
+  
+  a + p {
+    margin-top: 20px;
+  }

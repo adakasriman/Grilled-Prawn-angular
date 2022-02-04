@@ -1,0 +1,16 @@
+<a [routerLinkActive]='"/product/"+ idData.id'></a>
+<div class="product">
+    <div class="product-details">
+        <div class="imgAndPrice">
+            <img src={{idData.image}} alt="product">
+            <p>Price: $ {{idData.price}}</p>
+        </div>
+        <div class="titleAndDescription">
+            <h4>{{idData.title}}</h4>
+            <p>{{idData.description}}</p>
+            <div class="button">
+                <button (click)="update()">Add Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

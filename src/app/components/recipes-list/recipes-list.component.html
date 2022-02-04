@@ -1,0 +1,19 @@
+<div class='list-item'>
+    <a [routerLink]='"/product/"+ dataFromeparent.id'>
+        <div class='listItem-setup'>
+            <div class='imageAndPrice'>
+                <div class="img"></div>
+                <img src={{dataFromeparent.image}} alt="">
+                <div class="price">
+                    $ {{dataFromeparent.price}}
+                </div>
+            </div>
+            <h3 class="title">
+                {{dataFromeparent.title}}
+            </h3>
+        </div>
+    </a>
+    <div class="button">
+        <button  (click)="update()" >Add Cart</button>
+    </div>
+</div>

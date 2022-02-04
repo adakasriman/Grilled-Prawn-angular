@@ -1,0 +1,147 @@
+.our-recipes {
+  width: 98%;
+  margin: auto;
+}
+.our-recipes .header {
+  margin: 30px 0 20px 0;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.our-recipes .filter {
+  display: flex;
+  align-items: center;
+}
+
+.our-recipes .filter .filter-items {
+  width: 320px;
+  padding: 15px 7px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  color: #fff;
+  background: #ea474c;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.our-recipes .filter .filter-items .OC-btn {
+  position: relative;
+  top: -5px;
+  content: "";
+  width: 15px;
+  cursor: pointer;
+}
+
+
+.our-recipes .filter .filter-items h5 {
+  width: 125px;
+}
+
+.form-selectAndSearch {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.form-select {
+  padding: 7px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.form-selectAndSearch .search-recipes {
+  margin-right: -66px;
+}
+
+.form-selectAndSearch .search-recipes input {
+  width: 65%;
+  padding: 8px 10px 8px 40px;
+  border: none;
+  background: #c9c3c3;
+}
+
+.form-selectAndSearch .search-recipes label {
+  position: relative;
+  top: 2px;
+  left: 25px;
+  cursor: pointer;
+}
+
+.filter-types {
+  display: flex;
+  align-items: center;
+  background: #ea474c;
+  padding: 15px 15px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.filter-types h5 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.filter-types .type-options {
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 20px; */
+}
+
+.filter-types .form-group {
+  margin: 5px 0;
+}
+
+.filter-types .form-group input {
+  display: none;
+  cursor: pointer;
+}
+
+.filter-types .form-group label {
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+}
+
+.filter-types .form-group label:before {
+  content: "";
+  /* background-color: transparent; */
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  background: #fff;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.filter-types .form-group input:checked+label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  width: 6px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.filter-types .Nataionality {
+  width: 60%;
+  margin-left: 30px;
+}
+
+.filter-types .Nataionality .Nataionality-types {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

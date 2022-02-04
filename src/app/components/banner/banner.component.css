@@ -1,0 +1,41 @@
+.banner {
+  height: 68vh;
+  display: flex;
+}
+
+
+.banner img {
+  margin-top: 80px;
+}
+
+.banner .details {
+  width: 22vw;
+  padding: 30px 10px 10px 30px;
+  background: #ea474c;
+  margin-top: 80px;
+}
+
+
+.banner .details .chaild {
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.banner .details p {
+  font-size: 22px;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.button i {
+  position: relative;
+  top: 1.3px;
+  margin-left: 10px;
+}

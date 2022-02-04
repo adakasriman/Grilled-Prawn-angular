@@ -1,0 +1,13 @@
+<div class="home">
+  <app-banner></app-banner>
+  <section>
+    <app-recipes></app-recipes>
+    <div class="recipes-list">
+      <div class="item" *ngFor="let i of data">
+        <app-recipes-list [dataFromeparent]="i"></app-recipes-list>
+      </div>
+    </div>
+  </section>
+  <app-send-form></app-send-form>
+  <app-footer></app-footer>
+</div>

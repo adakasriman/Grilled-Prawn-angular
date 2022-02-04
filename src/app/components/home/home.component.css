@@ -1,0 +1,22 @@
+.home {
+    background: rgb(236, 230, 230);
+}
+
+section {
+    width: 92%;
+    margin: auto;
+}
+
+.recipes-list {
+    width: 100%;
+    margin: 90px auto 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.recipes-list .item {
+    width: 22.9%;
+    margin-bottom: 35px;
+}
+
