@@ -12,6 +12,9 @@ import { SendFormComponent } from './components/send-form/send-form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductViewComponent } from './components/product-view/product-view.component';
 import { HomeComponent } from './components/home/home.component';
+import { StudentComponent } from './components/student/student.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,17 @@ import { HomeComponent } from './components/home/home.component';
     SendFormComponent,
     FooterComponent,
     ProductViewComponent,
-    HomeComponent
+    HomeComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule ,
+    // FormGroup,
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

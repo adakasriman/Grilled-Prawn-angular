@@ -9,6 +9,7 @@ import { PostService } from 'src/app/post.service';
 export class RecipesListComponent implements OnInit {
   @Input() dataFromeparent: any;
 
+  
   value:any;
 
   constructor(private counter: PostService) { }

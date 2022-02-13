@@ -152,3 +152,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.student {
+  padding: 10px;
+  border: none;
+  background: blue;
+  color: #fff;
+  margin: 10px;
+}
