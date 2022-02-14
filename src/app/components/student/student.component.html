@@ -1,37 +1,35 @@
 <div class="container">
     <form class="form" [formGroup]="userData" (ngSubmit)='submitData()'>
+        <label for="roll">Roll Number</label>
+        <input type="text " formControlName="rollnumber" name="" id="roll" placeholder="roll number">
+        <span class="errorMsg" *ngIf=" f['rollnumber'].invalid && (f['rollnumber'].touched || submitedData)">this
+            input field is
+            required</span>
+
         <label for="firstname">firstname</label>
         <input type="text" formControlName="firstname" name="firstname" id="firstname" placeholder="firstname" required>
         <span class="errorMsg"
-            *ngIf="f['firstname'].invalid && (f['firstname'].touched || submitedData) && f['firstname']errors['required']">this
+            *ngIf="f['firstname'].invalid && (f['firstname'].touched || submitedData)">this
             input field is required</span>
         <!-- <span class="errorMsg" *ngIf="fname && fname.invalid && fname.touched ">this input field is required</span> -->
         <label for="lastName">lastname</label>
         <input type="text" formControlName="lastname" name="" id="lastName" placeholder="lastName">
         <span class="errorMsg"
-            *ngIf="f['lastname'].invalid && (f['firstname'].touched || submitedData) && f['firstname']errors['required']">this
+            *ngIf="f['lastname'].invalid && (f['firstname'].touched || submitedData)">this
             input field is required</span>
         <label for="branch">Branch</label>
         <input type="text" formControlName="branch" name="" id="branch" placeholder="branch">
         <span class="errorMsg"
-            *ngIf=" f['branch'].invalid &&(f['branch'].touched || submitedData) && f['branch']errors['required']">this
+            *ngIf=" f['branch'].invalid &&(f['branch'].touched || submitedData)">this
             input
             field is required</span>
-
-        <label for="roll">Roll Number</label>
-        <input type="text " formControlName="rollnumber" name="" id="roll" placeholder="roll number">
-        <span class="errorMsg"
-            *ngIf=" f['rollnumber'].invalid && (f['rollnumber'].touched || submitedData) && f['rollnumber']errors['required']">this
-            input field is
-            required</span>
-
         <label for="section">Section</label>
         <input type="text" formControlName="section" name="" id="section" placeholder="section">
         <span class="errorMsg"
-            *ngIf="f['section'].invalid && (f['section'].touched || submitedData) && f['section']errors['required']">this
+            *ngIf="f['section'].invalid && (f['section'].touched || submitedData)">this
             input field is required</span>
 
-        <button class="btn" type="submit">submit</button>
+        <button class="btn" type="submit" [disabled]="userData.invalid">submit</button>
     </form>
     <div>
         <table>
@@ -55,9 +53,11 @@
                 </td>
                 <td>
                     {{rows.section}}
-               </td>
+                </td>
+                <td>
+                    <button>edit</button>
+                </td>
             </tr>
-
         </table>
     </div>
 </div>

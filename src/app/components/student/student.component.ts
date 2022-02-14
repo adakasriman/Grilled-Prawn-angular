@@ -16,6 +16,8 @@ export class StudentComponent implements OnInit {
   userData!: FormGroup;
   submitedData: boolean | undefined;
   studentData: any;
+  editObject: any;
+  rNumber: any;
 
   constructor(private fb: FormBuilder) { }
 
@@ -24,12 +26,16 @@ export class StudentComponent implements OnInit {
   ngOnInit() {
 
     this.userData = this.fb.group({
-      "firstname": ['', Validators.required,Validators.minLength(5)],
+      "firstname": ['', Validators.required],
       "lastname": ['', Validators.required],
       "branch": ['', Validators.required],
       "rollnumber": ['', Validators.required],
       "section": ['', Validators.required],
     })
+
+    this.display();
+
+    // console.log(this.array);
   }
   get f() {
     return this.userData.controls;
@@ -37,45 +43,61 @@ export class StudentComponent implements OnInit {
 
   submitData() {
     this.submitedData = true;
-    this.students = this.userData.value;
 
-    this.addStudents(this.students);
-    this.display();
 
-  }
+    // console.log(this.editObject.rollnumber);
+    if (this.editObject) {
 
-  addStudents(student: any) {
-    let arr = [];
-
-    arr.push(student);
-
-    // console.log(student);
-
-    this.storeData = localStorage.getItem('students');
-    if (!this.storeData) {
-
-      localStorage.setItem("students", JSON.stringify(arr));
+      this.rNumber = this.editObject.rollnumber;
+      this.students = this.userData.value;
 
 
     } else {
-      let array = localStorage.getItem('students');
-      if (array) {
-        this.array = JSON.parse(array);
+      this.students = this.userData.value;
+    }
+
+    this.addStudents(this.students);
+    this.display();
+    this.userData.reset();
+    this.userData.clearValidators();
+  }
+
+  addStudents(student: any) {
+
+    let storeData = JSON.parse(localStorage.getItem('students') || '[]');
+    
+    let index = storeData.findIndex((x: { rollnumber: any; }) => x.rollnumber === student.rollnumber);
+    // debugger
+    let arr = [];
+
+    if(index !== -1){
+      storeData[index] = student;
+      localStorage.setItem("students", JSON.stringify(storeData))
+    }else{
+      let lstorageArray =  localStorage.getItem("students");
+      if(lstorageArray){
+        // debugger;
+        this.array = JSON.parse(lstorageArray);
         this.array.push(student);
         localStorage.setItem("students", JSON.stringify(this.array));
+      }else {
+        arr.push(student)
+        localStorage.setItem("students", JSON.stringify(arr));
       }
+      
     }
-    // localStorage.setItem("students", JSON.stringify(student));
+
   }
   display() {
     // debugger;
     let array = localStorage.getItem('students');
     if (array) {
-      this.array = JSON.parse(array);
+      this.array = JSON.parse(localStorage.getItem('students') || '[]');
       // console.log(this.data);
     }
 
   }
+
 
 }
 
