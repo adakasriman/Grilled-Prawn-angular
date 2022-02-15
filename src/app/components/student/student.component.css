@@ -36,12 +36,25 @@ input.ng-invalid.ng-touched {
     border: 1px solid red;
 }
 
+table hr {
+    border: 0.5px solid black;
+}
 
+.tr:last-child {
+    border: none;
+}
 
 .headers {
-    padding: 10px;
+   padding: 0 15px 0 25px;
 }
 
 td {
-    padding: 10px;
+    padding:10px 10px 10px 35px ;
+}
+
+.edit-btn {
+    padding: 5px 25px;
+    border: none;
+    background: rgb(116, 197, 116);
+    border-radius: 5px;
 }

@@ -36,26 +36,27 @@
             <tr>
                 <th class="headers" *ngFor="let column of headers">
                     {{column}}
+                    <hr>
                 </th>
             </tr>
             <tr *ngFor="let rows of array">
-                <td>
+                <td class="tableData">
                     {{rows.firstname}}
                 </td>
-                <td>
+                <td class="tableData">
                     {{rows.lastname }}
                 </td>
-                <td>
+                <td class="tableData">
                     {{rows.branch}}
                 </td>
-                <td>
+                <td class="tableData">
                     {{rows.rollnumber}}
                 </td>
-                <td>
+                <td class="tableData">
                     {{rows.section}}
                 </td>
                 <td>
-                    <button>edit</button>
+                    <button class="edit-btn" (click)="editStudentEdit(rows)">edit</button>
                 </td>
             </tr>
         </table>
