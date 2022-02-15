@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-student',
@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 })
 export class StudentComponent implements OnInit {
   headers = ["firstName", "lastName", "branch", "rollNumber", "section"];
-
+  numbers = [1, 2, 3, 4, 5, 6];
   array: any;
   data: any;
   storeData: any;
@@ -18,18 +18,18 @@ export class StudentComponent implements OnInit {
   studentData: any;
   editObject: any;
   rNumber: any;
+  existed = false;
 
   constructor(private fb: FormBuilder) { }
-
 
 
   ngOnInit() {
 
     this.userData = this.fb.group({
-      "firstname": ['', Validators.required],
+      "firstname": ['', [Validators.required]],
       "lastname": ['', Validators.required],
       "branch": ['', Validators.required],
-      "rollnumber": ['', Validators.required],
+      "rollnumber": ['', [Validators.required, this.inputValidator.bind(this)]],
       "section": ['', Validators.required],
     })
 
@@ -39,6 +39,24 @@ export class StudentComponent implements OnInit {
   }
   get f() {
     return this.userData.controls;
+  }
+
+
+
+  inputValidator(control: FormControl) {
+    debugger;
+    var rNumberArray = JSON.parse(localStorage.getItem("students") || '[]').map((item: any) => {
+      return parseInt(item.rollnumber);
+    })
+
+    let a = parseInt(control.value);
+    let boolean = rNumberArray.some((item: any) => item === a);
+
+    if (boolean) {
+      this.existed = true;
+    } else {
+      this.existed = false;
+    }
   }
 
   submitData() {
@@ -63,6 +81,7 @@ export class StudentComponent implements OnInit {
   }
 
   addStudents(student: any) {
+
 
     let storeData = JSON.parse(localStorage.getItem('students') || '[]');
 
