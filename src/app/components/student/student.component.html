@@ -11,9 +11,10 @@
 
         <label for="firstname">firstname</label>
         <input type="text" formControlName="firstname" name="firstname" id="firstname" placeholder="firstname" required>
-        <span class="errorMsg"
+        <!-- <span class="errorMsg"
             *ngIf="f['firstname'].invalid && (f['firstname'].touched)">this
-            input field is required</span>
+            input field is required</span> -->
+            <span  class="errorMsg" *ngIf="f['firstname'].invalid && (f['firstname'].touched)">input field is more then 3 chars</span>
         <!-- <span class="errorMsg" *ngIf="fname && fname.invalid && fname.touched ">this input field is required</span> -->
         <label for="lastName">lastname</label>
         <input type="text" formControlName="lastname" name="" id="lastName" placeholder="lastName">
@@ -32,7 +33,7 @@
             *ngIf="f['section'].invalid && (f['section'].touched)">this
             input field is required</span>
 
-        <button class="btn" type="submit" [disabled]="userData.invalid">submit</button>
+        <button class="btn" type="submit" [disabled]="userData.invalid"  >submit</button>
     </form>
     <div>
         <table>
@@ -62,6 +63,10 @@
                     <button class="edit-btn" (click)="editStudentEdit(rows)">edit</button>
                 </td>
             </tr>
-        </table>
+        </table>   
     </div>
 </div>
+
+<!-- <div class="student">
+    <button class="student-btn" routerLink = "/studentData">Go student data</button> 
+</div> -->

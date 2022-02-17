@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, AbstractControl } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-student',
@@ -8,7 +9,6 @@ import { FormGroup, FormControl, Validators, FormBuilder, AbstractControl } from
 })
 export class StudentComponent implements OnInit {
   headers = ["firstName", "lastName", "branch", "rollNumber", "section"];
-  numbers = [1, 2, 3, 4, 5, 6];
   array: any;
   data: any;
   storeData: any;
@@ -20,13 +20,13 @@ export class StudentComponent implements OnInit {
   rNumber: any;
   existed = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,public router: Router) { }
 
 
   ngOnInit() {
 
     this.userData = this.fb.group({
-      "firstname": ['', [Validators.required]],
+      "firstname": ['', [Validators.required,Validators.minLength(3)]],
       "lastname": ['', Validators.required],
       "branch": ['', Validators.required],
       "rollnumber": ['', [Validators.required, this.inputValidator.bind(this)]],
@@ -44,7 +44,7 @@ export class StudentComponent implements OnInit {
 
 
   inputValidator(control: FormControl) {
-    debugger;
+    // debugger;
     var rNumberArray = JSON.parse(localStorage.getItem("students") || '[]').map((item: any) => {
       return parseInt(item.rollnumber);
     })
@@ -78,6 +78,7 @@ export class StudentComponent implements OnInit {
     this.display();
     this.userData.reset();
     this.userData.clearValidators();
+    this.goPlaces();
   }
 
   addStudents(student: any) {
@@ -122,6 +123,10 @@ export class StudentComponent implements OnInit {
       data
       // formControlName2: myValue2 (can be omitted)
     );
+  }
+
+  goPlaces() {
+    this.router.navigate(['studentData']);
   }
 
 

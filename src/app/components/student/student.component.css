@@ -58,3 +58,16 @@ td {
     background: rgb(116, 197, 116);
     border-radius: 5px;
 }
+
+.student-btn {
+padding: 10px 20px;
+border-radius: 20px;
+background: green;
+border: none;
+ }
+
+.student {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}

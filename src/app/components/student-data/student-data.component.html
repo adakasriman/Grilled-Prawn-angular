@@ -1,0 +1,29 @@
+<div class="sudentData">
+    <div class="insideDiv">
+        <table class="table">
+            <tr>
+                <th class="headers" *ngFor="let column of headers">
+                    {{column}}
+                </th>
+                <hr>
+            </tr>
+            <tr *ngFor="let row of array">
+                <td class="tableData">
+                    {{row.firstname}}
+                </td>
+                <td class="tableData">
+                    {{row.lastname}}
+                </td>
+                <td class="tableData">
+                    {{row.branch}}
+                </td>
+                <td class="tableData">
+                    {{row.rollnumber}}
+                </td>
+                <td class="tableData">
+                    {{row.section}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

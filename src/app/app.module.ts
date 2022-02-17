@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { StudentComponent } from './components/student/student.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { StudentDataComponent } from './components/student-data/student-data.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     ProductViewComponent,
     HomeComponent,
-    StudentComponent
+    StudentComponent,
+    StudentDataComponent
   ],
   imports: [
     BrowserModule,
