@@ -24,7 +24,7 @@ const routes: Routes = [
     component: StudentComponent
   },
   {
-    path: "/studentData",
+    path: "studentData",
     component: StudentDataComponent
   },
 
